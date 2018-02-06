@@ -1,0 +1,42 @@
+{
+  "globals": {
+    // Put things like jQuery, etc
+    "jQuery": true,
+    "$": true,
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jquery": true
+  },
+  "env": {
+    // I write for browser
+    "browser": true,
+    // in CommonJS
+    "node": true
+  },
+  // To give you an idea how to override rule options:
+  "rules": {
+    // Обеспечить согласованное расстояние между круглыми скобками
+      "space-in-parens": [ 2, "always" ],
+  // Обеспечить согласованное расстояние между скобками массива
+      "array-bracket-spacing": [ 2, "always" ],
+  // Обеспечить согласованное расстояние между фигурными скобками
+      "object-curly-spacing": [ 2, "always" ],
+  // Обеспечить согласованное расстояние внутри скопированных квадратных скобок
+      "computed-property-spacing": [ 2, "always" ],
+
+  // Обеспечить последовательное использование либо обратных, двойных, либо одинарных кавычек
+    "quotes": [ 2, "double" ],
+
+  // Ненужные круглые скобки
+    "no-extra-parens": [ 1, "all" ],
+  // Ненужные точки с запятой
+    "no-extra-semi": [ 2 ],
+  // Несколько пробелов в регулярных выражениях
+    "no-regex-spaces": [ 2 ],
+  // Разреженные массивы
+    "no-sparse-arrays": [ 2 ],
+  // Недостижимый код после того, как return, throw, continue, и breakзаявления
+    "no-unreachable": [ 2 ]
+  }
+}

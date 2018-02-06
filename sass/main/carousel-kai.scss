@@ -1,0 +1,162 @@
+html,body{
+	min-height: 100%;
+}
+body{
+	margin: 0;
+}
+
+@mixin flex-kai{
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+
+	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+
+	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+
+	align-items: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+}
+
+@mixin scale-kai($size){
+	-ms-transform: scale($size); /* Для IE */
+	-webkit-transform: scale($size); /* Для Safari, Chrome, iOS */
+	-o-transform: scale($size); /* Для Opera */
+	transform: scale($size);
+}
+
+.carousel-kai{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 500px;
+	max-height: 100%;
+	background-color: rgba(68,68,68,0.1);
+	overflow: hidden;
+}
+
+.carousel-kai > .bg-drop{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 0.3;
+	background-size: cover;
+	background-position: center center;
+	-webkit-transition: background-image 300ms ease-in-out;
+	-ms-transition: background-image 300ms ease-in-out;
+	transition: background-image 300ms ease-in-out;
+
+}
+
+.owl-carousel,
+.owl-stage-outer,
+.owl-stage,
+.owl-item{
+	height: 100%;
+}
+
+.owl-carousel .owl-item{
+	@include flex-kai;
+
+	justify-content: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: center;
+	-ms-flex-pack: justify;
+	overflow: hidden;
+
+	flex-wrap: nowrap;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+
+	@include scale-kai(0.9);
+	opacity: 0.3;
+	
+	-webkit-transition: opacity 200ms, transform 500ms ease-in-out;
+	transition: opacity 200ms, transform 500ms ease-in-out;
+
+	&.center{
+		@include scale-kai(1);
+		opacity: 1;
+	}
+
+	>div{
+		width: 100%;
+		height: 100%;
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+.controls-kai{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: auto;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.controls-kai .arrow{
+	font-size: 30px;
+	position: absolute;
+	width: 40px;
+	height: 50px;
+	background-color: #8accff;
+	z-index: 1;
+	text-align: center;
+	cursor: pointer;
+	
+	-ms-transform: translateY(-50%) scale(1);
+	-webkit-transform: translateY(-50%) scale(1);
+	transform: translateY(-50%) scale(1);
+
+	-webkit-transition: 100ms ease-in-out;
+	transition: 100ms ease-in-out;
+	& i{
+		color: #ffffff;
+		line-height: 50px;
+	}
+	&.left{
+		left: 0;
+		pointer-events: auto;
+	}
+	&.right{
+		right: 0;
+		pointer-events: auto;
+	}
+	&.left:before,
+	&.right:before{
+		font-family: 'revicons';
+		font-size: 2em;
+		line-height: 50px;
+		color: #fff;
+	}
+	&:hover{
+		-ms-transform: translateY(-50%) scale(1.1);
+		-webkit-transform: translateY(-50%) scale(1.1);
+		transform: translateY(-50%) scale(1.1);
+	}
+	&:active{
+		-ms-transform: translateY(-50%) scale(1);
+		-webkit-transform: translateY(-50%) scale(1);
+		transform: translateY(-50%) scale(1);
+	}
+}

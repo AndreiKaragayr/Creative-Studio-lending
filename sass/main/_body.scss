@@ -1,0 +1,71 @@
+html,body{
+	min-height: 100%;
+}
+
+body{
+	font-family: 'Lato','Arial','Helvetica',sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+	line-height: 1.7;
+    color: #555;
+	color: $c-text;
+	margin: 0;
+	background: $c-white;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+
+img{
+	height: auto;
+	max-width: 100%;
+}
+
+a{
+	@include btn-animated;
+	&:hover,
+	&:active{
+		text-decoration: none;
+		color: $c-hover;
+	}
+}
+
+input{
+	font-family: 'Montserrat','Arial','Helvetica',sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+input:focus{
+	outline: none;
+}
+
+input[type="search"]{
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.4);
+	text-transform: uppercase;
+	padding: 5px;
+	border: 0;
+		width: 100%;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: rgba(255, 255, 255, 0.4);
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: rgba(255, 255, 255, 0.4);
+}
+:-ms-input-placeholder { /* IE 10+ */
+	color: rgba(255, 255, 255, 0.4);
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: rgba(255, 255, 255, 0.4);
+}

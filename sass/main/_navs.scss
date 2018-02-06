@@ -1,0 +1,18 @@
+.header .kai-menu{
+	width: 100%;
+	& .kai-menu li a{
+		display: block;
+		font-family: 'Montserrat','Arial','Helvetica',sans-serif;
+		font-size: 12px;
+		font-weight: 400;
+		color: $c-a;
+		position: relative;
+		white-space: nowrap;
+		&:hover{
+			color: $c-hover;
+		}
+		&.active{
+			color: $c-hover;
+		}
+	}
+}

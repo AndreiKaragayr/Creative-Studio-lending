@@ -1,0 +1,118 @@
+.page-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.slidbar{
+	width: 300px;
+	height: 100%;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 99999;
+	@include bar-transition(0.3s)
+}
+.slidbar.no_active{
+	right: -300px;
+}
+
+.slidbar .close{
+	color: $c-text;
+	width: 25px;
+	height: 25px;
+	border: 1px solid $c-title;
+	position: relative;
+	top: 0;
+	right: 0;
+	& .glyphicon{
+		left: 1px;
+	}
+}
+
+.slidbar-wrapper{
+	padding: 10%;
+	height: 100%;
+}
+
+.slidbar-body{
+	position: relative;
+	min-height: 580px;
+	overflow: hidden;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+
+	-webkit-transition: transform 500ms ease;
+	-ms-transition: transform 500ms ease;
+	transition: transform 500ms ease;
+}
+
+.slidbar-body .lodo-mimi{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  & img{
+		margin: auto;
+  }
+}
+
+.slidbar-body .stream{
+	padding: 50px 0;
+}
+
+.slidbar-body .img-gallery{
+	@include flex-r-space;
+	justify-content: flex-start;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: justify;
+}
+
+.img-gallery li{
+	flex: 0 0 auto;
+	width: calc( 25% - 6px );
+	margin: 3px;
+}
+
+.slidbar-body .contact-info{
+	padding: 0 0 50px 0;
+	& li{
+		font-size: 13px;
+		color: $c-text2;
+		padding: 5px 0;
+		margin: 0;
+		text-align: center;
+		& i{
+			margin: 0 3px;
+		}
+	}
+}
+
+.social-icons{
+	padding: 12px 0 50px;
+	text-align: center;
+	& li{
+		font-size: 13px;
+		display: inline-block;
+		margin-right: 12px;
+	}
+	& .custom-fab{
+		font-size: 1.5em;
+		color: $c-text2;
+		-webkit-transition: 0.35s ease;
+		transition: 0.35s ease;
+	}
+	& li:hover .custom-fab{
+		color: $c-hover;
+	}
+}
+

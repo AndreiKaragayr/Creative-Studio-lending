@@ -1,0 +1,114 @@
+
+.footer-content{
+	position: relative;
+	min-height: 480px;
+	height: auto;
+}
+
+.footer-text{
+	& .bg-image{
+		background: url(../img/overlap-bg-068.jpg) no-repeat center top/cover;
+	}
+}
+
+.wr-review{
+	& li{
+		display: block;
+		margin-bottom: 10px;
+	}
+	& li:hover img{
+		-ms-transform: scale(1.4);
+		-webkit-transform: scale(1.4);
+		transform: scale(1.4);
+	}
+	& .user-pict{
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		overflow: hidden;
+		& img {
+			display: block;
+			max-width: 100%;
+			-webkit-transition: -webkit-transform 0.35s ease;
+			transition: transform 0.35s ease;
+		}
+	}
+	& .user-info{
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 6px;
+		& .user-login,
+		& .what-projact{
+			display: block;
+		}
+		& a,
+		& p,
+		& span{
+			line-height: 1;
+		}
+		& a{
+			color: $c-white;
+			margin-bottom: 6px;
+			&:hover{
+				color: $c-hover;
+			}
+		}
+		& p,
+		& span{
+			font-size: 0.8em;
+			margin: 0;
+		}
+	}
+	& .likes{
+		line-height: 1;
+	}
+	& .likes li{
+		display: inline-block;
+		& i.custom-star{
+			font-size: 0.8em;
+			color: $c-hover;
+		}
+	}
+}
+
+.wr-text-box{
+	display: block;
+}
+
+.w-separator{
+	display: inline-block;
+	vertical-align: middle;
+	width: 60%;
+	height: 1px;
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+	border-top-width: 2px;
+	border-color: $c-text2;
+}
+
+.footer-text .social-icons{
+	text-align: left;
+	& li{
+		padding: 12px 0;
+	}
+	& .custom-fab{
+		font-size: 1.7em;
+		color: $c-white;
+		opacity: 0.5;
+
+	}
+	& li:hover .custom-fab{
+		color: $c-white;
+		opacity: 1;
+	}
+}
+
+.footer-bottom{
+	position: relative;
+	background-color: #000;
+	color: $c-white;
+	& p{
+		margin: 0;
+	}
+}

@@ -1,0 +1,135 @@
+html,body{
+	min-height: 100%;
+}
+
+body{
+	margin: 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&subset=cyrillic');
+.kai-board{
+	padding: 40px 0;
+	overflow: hidden;
+}
+
+.kai-board a{
+	text-decoration: none;
+}
+.kai-board p{
+	margin: 0;
+	padding: 0;
+}
+
+.kai-board .row.font-null{
+	font-size: 0;
+}
+
+.kai-board .col-3{
+	display: inline-block;
+	float: none;
+}
+
+.kai-board .col-3{
+	width: 25%;
+}
+
+.kai-board .col-inner {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.kai-board .wr-progress-board{
+	color: #6f94b1;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+}
+
+.kai-board .wr-progress-board .icon-board {
+    display: block;
+    text-align: center;
+}
+
+.kai-board .wr-progress-board .icon-board > i {
+	font-size: 110px;
+	line-height: 120px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.3;
+}
+
+.kai-board .counter-value {
+	font-family: 'Playfair Display','Arial','Helvetica',sans-serif;
+	font-size: 80px;
+	line-height: 70px;
+	font-weight: normal;
+	display: block;
+	margin: 0;
+	color: #222;
+}
+
+.kai-board .counter-title {
+	font-family: 'Montserrat','Arial','Helvetica',sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	margin: 0;
+	font-size: 14px;
+	line-height: 25px;
+	padding-top: 25px;
+	text-transform: uppercase;
+	color: inherit;
+}
+.kai-board .counter-value,
+.kai-board .counter-title{
+	position: relative;
+	z-index: 2;
+	-webkit-transition-timing-function: cubic-bezier(0.75,0,0.125,1);
+	-ms--webkit-transition-timing-function: cubic-bezier(0.75,0,0.125,1);
+	transition-timing-function: cubic-bezier(0.75,0,0.125,1);
+}
+
+.kai-board .wr-progress-board.animate .icon-board > i{
+	animation-name: activeCounter;
+	animation-duration: 1000ms;
+	animation-timing-function: cubic-bezier(0.75,0,0.125,1);
+}
+
+@-webkit-keyframes activeCounter {
+	0% { opacity: 0.3; transform: scale(1); }
+	61% { opacity: 1; transform: scale(1.2); }
+	100% { opacity: 0.3; transform: scale(1); }
+}
+@-o-keyframes activeCounter {
+	0% { opacity: 0.3; transform: scale(1);  }
+	61% { opacity: 1; transform: scale(1.2); }
+	100% { opacity: 0.3; transform: scale(1); }
+}
+@-moz-keyframes activeCounter {
+	0% { opacity: 0.3; transform: scale(1); }
+	61% { opacity: 1; transform: scale(1.2); }
+	100% { opacity: 0.3; transform: scale(1); }
+}
+@keyframes activeCounter {
+	0% { opacity: 0.3; transform: scale(1); }
+	61% { opacity: 1; transform: scale(1.2); }
+	100% { opacity: 0.3; transform: scale(1); }
+}
+
+
+@media only screen and (max-width: 900px){
+	.kai-board .col-md-6{
+		width: 50%;
+	}
+	.kai-board .col-inner{
+		margin-bottom: 40px;
+	}
+}
+@media only screen and (max-width: 766px){
+	.kai-board .col-md-12{
+		width: 100%;
+	}
+}
+

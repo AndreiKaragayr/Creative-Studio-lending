@@ -1,0 +1,79 @@
+.btn-black,
+.btn-white{
+	font-family: 'Montserrat','Arial','Helvetica',sans-serif;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1.1;
+	padding: 12px 40px;
+	text-transform: uppercase;
+	text-align: center;	
+	outline: none;
+	border-radius: 0;
+	position: relative;
+	z-index: 1;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+
+	-webkit-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	& span {
+		position: relative;
+		left:0;
+		@include bar-transition(300ms);
+		&:after{
+			font-family: 'Font Awesome 5 Free';
+			font-size: 12px;
+			line-height: 0;
+			color: inherit;
+			position: absolute;
+			top: 50%;
+			right: 16px;
+			opacity: 0;
+			@include bar-transition(300ms);
+	
+			-webkit-transform: translateX(40px) translateY(50%);
+			-ms-transform: translateX(40px) translateY(50%);
+			transform: translateX(40px) translateY(50%);
+			-webkit-transition-timing-function: cubic-bezier(0.75,0,0.125,1);
+			transition-timing-function: cubic-bezier(0.75,0,0.125,1);
+		}
+	}
+	&:hover span,
+	&:active span{
+		left: -16px;
+		color: $c-white;
+	}
+	&:hover > span:after,
+	&:active > span:after{
+		opacity: 1;
+	}
+}
+
+.btn-black{
+	font-weight: 700;
+	color: #ffffff;
+	background-color: $btn-black;
+	border: 1px solid $btn-black;
+	& span:after{
+		font-family: 'Font Awesome 5 Free';
+		content: '\f054';
+	}
+}
+
+.btn-white{
+	font-weight: 400;
+	color: $btn-black;
+	background-color: $btn-white;
+	border: 1px solid $btn-white;
+	& span:after{
+		font-family: 'Font Awesome 5 Free';
+		content: '\f35a';
+	}
+	&:hover span,
+	&:active span{
+		left: -16px;
+		color: $btn-black;
+	}
+}

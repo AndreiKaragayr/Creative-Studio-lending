@@ -1,0 +1,30 @@
+@mixin btn-animated{
+	-moz-transition: 0.3s ease-in-out;; /* Для Firefox */
+	-ms-transition: 0.3s ease-in-out;; /* Для IE */
+	-webkit-transition: 0.3s ease-in-out;; /* Для Safari, Chrome, iOS */
+	-o-transition: 0.3s ease-in-out;; /* Для Opera */
+	transition: 0.3s ease-in-out;;
+}
+
+@mixin scale($size){
+	-ms-transform: scale($size); /* Для IE */
+	-webkit-transform: scale($size); /* Для Safari, Chrome, iOS */
+	-o-transform: scale($size); /* Для Opera */
+	transform: scale($size);
+}
+
+@mixin bar-transition($time){
+	-moz-transition: all $time ease-out; /* Для Firefox */
+	-ms-transition: all $time ease-out; /* Для IE */
+	-webkit-transition: all $time ease-out; /* Для Safari, Chrome, iOS */
+	-o-transition: all $time ease-out; /* Для Opera */
+	transition: all $time ease-out;
+}
+
+@mixin backg-responsive{
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+}

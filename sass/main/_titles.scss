@@ -1,0 +1,78 @@
+h1,h2,h3{
+	font-family: 'Playfair Display','Arial','Helvetica',sans-serif;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+
+.title-heading{
+	font-family: 'Playfair Display','Arial','Helvetica',sans-serif;
+	font-size: 58px;
+	font-weight: 700;
+	color: $c-title;
+	line-height: 1;
+	padding: 0;
+	margin: 0;
+}
+.subtitle{
+	font-family: 'Lato','Arial','Helvetica',sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	font-weight: normal;
+	color: $c-hover;
+	line-height: 1.5;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: block;
+	margin-bottom: 0px;
+}
+
+.content .area-scroll{
+	& .title-heading{
+		font-family: 'Playfair Display','Arial','Helvetica',sans-serif;
+		font-weight: 700;
+		color: $c-title;
+	}
+	& .subtitle{
+		font-family: 'Lato','Arial','Helvetica',sans-serif;
+		font-weight: 400;
+	}
+}
+
+.technologies h3{
+	font-family: 'Montserrat','Arial','Helvetica',sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	color: #fff;
+	text-transform: capitalize;
+	margin: 0 0 15px;
+	margin-bottom: 10px;
+}
+
+.to-action{
+	& .w-heading{
+		padding-top: 0;
+		padding-bottom: 30px;
+		margin-top: -95px;
+		position: relative;
+		z-index: 1;
+		&:before{
+			content: '';
+			display: block;
+			width: 1px;
+			height: 200px;
+			background: #000;
+			margin: 0 auto 10px;
+		}
+	}
+	
+	& .subtitle{
+		margin-top: 10px;
+	}
+}
+
+.footer-text .wr-text-box h3{
+	color: $c-white;
+	margin: 0;
+	margin-bottom: 15px;
+}
